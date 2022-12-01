@@ -19,5 +19,11 @@ module.exports = {
     sourceType: "module"
   },
   plugins: ["react", "@typescript-eslint"],
-  rules: {}
+  rules: {
+    "no console": "warn",
+    quotes: ["error", "prefer-double"],
+    "prefer-const": "error",
+    indent: ["warn", 2],
+    semi: ["warn", "always"]
+  }
 };
