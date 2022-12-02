@@ -1,6 +1,6 @@
 {
   "bracketSpacing": true,
-  "trailingComma": "none",
+  "trailingComma": "es5",
   "printWidth": 80,
   "arrowParens": "avoid",
   "semi": true,

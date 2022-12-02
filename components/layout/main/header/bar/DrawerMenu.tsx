@@ -21,8 +21,8 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
       PaperProps={{
         sx: {
           width: { xs: "100vw", sm: "380px" },
-          pt: 4
-        }
+          pt: 4,
+        },
       }}
     >
       <Stack spacing={5} px={{ xs: 2.5 }}>
@@ -33,7 +33,7 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
               textAlign: "center",
               fontSize: { xs: 24 },
               fontFamily: "Comfortaa",
-              fontWeight: 600
+              fontWeight: 600,
             }}
           >
             Menu
@@ -42,7 +42,7 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
         <Stack
           sx={{
             display: "flex",
-            justifyContent: "flex-start"
+            justifyContent: "flex-start",
           }}
           spacing={5}
         >
@@ -55,7 +55,7 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
               borderBottom: "2px solid #DADADA",
               pb: 2,
               justifyContent: "space-between",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <Grid item>
@@ -65,7 +65,7 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
                   sx={{
                     color: "black",
                     fontSize: { xs: 20, sm: 18 },
-                    fontFamily: "Comfortaa"
+                    fontFamily: "Comfortaa",
                   }}
                 >
                   Category

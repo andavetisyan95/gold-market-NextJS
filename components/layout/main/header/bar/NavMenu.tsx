@@ -1,21 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Box, Grid, Hidden, Typography } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer } from ".";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export default function NavMenu() {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [changeBackground, setChangeBackground] = useState(false);
+
+  const handleChangeBackground = () => {
+    if (window.scrollY >= 1) {
+      setChangeBackground(true);
+    } else {
+      setChangeBackground(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleChangeBackground);
+    return () => window.removeEventListener("scroll", handleChangeBackground);
+  }, []);
 
   return (
-    <Box sx={{ top: 0, zIndex: 1 }}>
+    <Box
+      sx={{
+        top: 0,
+        zIndex: 1,
+        background: changeBackground ? "#121d23" : "transparent",
+        position: "sticky"
+      }}
+    >
       <Grid
         container
         sx={{
           justifyContent: "space-between",
           alignItems: "center",
           px: 10,
-          py: 3
+          py: 2
         }}
       >
         <Grid item className="clickable" onClick={() => setOpenDrawer(true)}>
@@ -34,7 +55,8 @@ export default function NavMenu() {
                     fontSize: "14px",
                     fontWeight: 400,
                     color: "primary.main",
-                    letterSpacing: 2
+                    letterSpacing: 2,
+                    fontFamily: "Comfortaa"
                   }}
                 >
                   MENU
@@ -46,7 +68,11 @@ export default function NavMenu() {
         <Grid item>
           <Link href={"/"}>
             <Typography
-              sx={{ fontFamily: "Caveat", fontWeight: "700", fontSize: 40 }}
+              sx={{
+                fontWeight: "700",
+                fontSize: { xs: 18, sm: 24, lg: 40 },
+                fontFamily: "Comfortaa"
+              }}
               color="primary.main"
             >
               The Carats

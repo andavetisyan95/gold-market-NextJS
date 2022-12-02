@@ -18,7 +18,7 @@ export default function MainLayout({ children, title }: MainLayoutProps) {
       </Head>
       <Stack sx={{ position: "relative" }}>
         <Header />
-        <Box sx={{ px: 12.5, mt: 22 }}>{children}</Box>
+        <Box sx={{ px: 10, mt: 12, mb: 10 }}>{children}</Box>
         <Footer />
       </Stack>
     </>

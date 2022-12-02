@@ -1,5 +1,6 @@
-import { Box, Typography } from "@mui/material";
 import React from "react";
+
+import { Box, Typography } from "@mui/material";
 
 type Props = {
   title: string;
@@ -10,7 +11,7 @@ export default function MenuTypography({ title }: Props) {
     <Box
       sx={{
         borderBottom: "2px solid #DADADA",
-        pb: 1
+        pb: 1,
       }}
     >
       <Typography
@@ -18,7 +19,7 @@ export default function MenuTypography({ title }: Props) {
         sx={{
           color: "black",
           fontSize: { xs: 20, sm: 18 },
-          fontFamily: "Comfortaa"
+          fontFamily: "Comfortaa",
         }}
       >
         {title}
