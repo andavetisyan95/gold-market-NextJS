@@ -19,7 +19,6 @@ export default function MenuTypography({ title }: Props) {
         sx={{
           color: "black",
           fontSize: { xs: 20, sm: 18 },
-          fontFamily: "Comfortaa",
         }}
       >
         {title}

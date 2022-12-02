@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Box, Drawer, Grid, Typography, Stack } from "@mui/material";
 
-import MenuTypography from "components/common/MenuTypography";
+import MenuTypography from "components/common/MenuTitles";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CategoryMenu from "./CategoryMenu";
 
 type Props = {
   openDrawer: boolean;
@@ -13,6 +14,7 @@ type Props = {
 
 export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
   const [showCategories, setShowCategories] = useState(false);
+
   return (
     <Drawer
       anchor="left"
@@ -32,7 +34,6 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
               color: "primary.main",
               textAlign: "center",
               fontSize: { xs: 24 },
-              fontFamily: "Comfortaa",
               fontWeight: 600,
             }}
           >
@@ -49,40 +50,47 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
           <Link href={"/"} onClick={closeDrawer}>
             <MenuTypography title="Home" />
           </Link>
-          <Grid
-            container
-            sx={{
-              borderBottom: "2px solid #DADADA",
-              pb: 2,
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
+          <Stack>
+            <Grid
+              container
+              sx={{
+                borderBottom: "2px solid #DADADA",
+                pb: 2,
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Grid item>
+                <Link href={"/categories/"} onClick={closeDrawer}>
+                  <Typography
+                    className="drawer_text_hover"
+                    sx={{
+                      color: "black",
+                      fontSize: { xs: 20, sm: 18 },
+                    }}
+                  >
+                    {showCategories ? "Categories" : "Category"}
+                  </Typography>
+                </Link>
+              </Grid>
+              <Grid item onClick={() => setShowCategories(prev => !prev)}>
+                {showCategories ? (
+                  <ExpandMoreIcon className="clickable drawer_text_hover" />
+                ) : (
+                  <ArrowForwardIosIcon
+                    sx={{ fontSize: "medium" }}
+                    className="clickable drawer_text_hover"
+                  />
+                )}
+              </Grid>
+            </Grid>
             <Grid item>
-              <Link href={"/categories/"} onClick={closeDrawer}>
-                <Typography
-                  className="drawer_text_hover"
-                  sx={{
-                    color: "black",
-                    fontSize: { xs: 20, sm: 18 },
-                    fontFamily: "Comfortaa",
-                  }}
-                >
-                  Category
-                </Typography>
-              </Link>
+              <CategoryMenu
+                openCategories={showCategories}
+                close={closeDrawer}
+              />
             </Grid>
-            <Grid item onClick={() => setShowCategories(prev => !prev)}>
-              {showCategories ? (
-                <ExpandMoreIcon className="clickable drawer_text_hover" />
-              ) : (
-                <ArrowForwardIosIcon
-                  sx={{ fontSize: "medium" }}
-                  className="clickable drawer_text_hover"
-                />
-              )}
-            </Grid>
-          </Grid>
+          </Stack>
           <Link href={"/about"} onClick={closeDrawer}>
             <MenuTypography title="About Us" />
           </Link>

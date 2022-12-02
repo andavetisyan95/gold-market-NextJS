@@ -5,24 +5,25 @@ export const theme = createTheme({
     primary: {
       main: "#dbbf1f",
       light: "#edd51c",
-      dark: "#c2a502"
+      dark: "#c2a502",
     },
     secondary: {
-      main: "#DADADA"
-    }
+      main: "#DADADA",
+    },
   },
   components: {
     MuiTypography: {
       styleOverrides: {
         root: {
-          color: "white"
-        }
-      }
+          color: "white",
+          fontFamily: "Comfortaa",
+        },
+      },
     },
     MuiButton: {
       defaultProps: {
-        disableRipple: true
-      }
-    }
-  }
+        disableRipple: true,
+      },
+    },
+  },
 });

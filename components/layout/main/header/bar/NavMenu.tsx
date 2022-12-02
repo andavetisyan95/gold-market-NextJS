@@ -25,9 +25,10 @@ export default function NavMenu() {
     <Box
       sx={{
         top: 0,
+        right: 0,
         zIndex: 1,
         background: changeBackground ? "#121d23" : "transparent",
-        position: "sticky"
+        position: "sticky",
       }}
     >
       <Grid
@@ -36,7 +37,7 @@ export default function NavMenu() {
           justifyContent: "space-between",
           alignItems: "center",
           px: 10,
-          py: 2
+          py: 2,
         }}
       >
         <Grid item className="clickable" onClick={() => setOpenDrawer(true)}>
@@ -56,7 +57,6 @@ export default function NavMenu() {
                     fontWeight: 400,
                     color: "primary.main",
                     letterSpacing: 2,
-                    fontFamily: "Comfortaa"
                   }}
                 >
                   MENU
@@ -71,7 +71,6 @@ export default function NavMenu() {
               sx={{
                 fontWeight: "700",
                 fontSize: { xs: 18, sm: 24, lg: 40 },
-                fontFamily: "Comfortaa"
               }}
               color="primary.main"
             >
