@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Box, Drawer, Grid, Typography, Stack } from "@mui/material";
 
@@ -6,6 +6,7 @@ import MenuTypography from "components/common/MenuTitles";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CategoryMenu from "./CategoryMenu";
+import { useRouter } from "next/router";
 
 type Props = {
   openDrawer: boolean;
@@ -13,7 +14,14 @@ type Props = {
 };
 
 export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
+  const router = useRouter();
   const [showCategories, setShowCategories] = useState(false);
+
+  const handleCloseCategories = () => setShowCategories(false);
+
+  useEffect(() => {
+    if (showCategories) handleCloseCategories();
+  }, [router.asPath]);
 
   return (
     <Drawer
@@ -47,7 +55,7 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
           }}
           spacing={5}
         >
-          <Link href={"/"} onClick={closeDrawer}>
+          <Link href={"/"}>
             <MenuTypography title="Home" />
           </Link>
           <Stack>
@@ -61,7 +69,7 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
               }}
             >
               <Grid item>
-                <Link href={"/categories/"} onClick={closeDrawer}>
+                <Link href={"/categories/"}>
                   <Typography
                     className="drawer_text_hover"
                     sx={{
@@ -91,10 +99,10 @@ export default function DrawerMenu({ openDrawer, closeDrawer }: Props) {
               />
             </Grid>
           </Stack>
-          <Link href={"/about"} onClick={closeDrawer}>
+          <Link href={"/about"}>
             <MenuTypography title="About Us" />
           </Link>
-          <Link href={"/contacts"} onClick={closeDrawer}>
+          <Link href={"/contacts"}>
             <MenuTypography title="Contacts" />
           </Link>
         </Stack>
