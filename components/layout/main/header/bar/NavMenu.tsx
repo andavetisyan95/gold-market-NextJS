@@ -47,7 +47,7 @@ export default function NavMenu() {
             sx={{ justifyContent: "center", alignItems: "center" }}
           >
             <Grid item>
-              <MenuIcon sx={{ color: "primary.light", fontSize: "2rem" }} />
+              <MenuIcon sx={{ color: "primary.main", fontSize: "2rem" }} />
             </Grid>
             <Hidden lgDown>
               <Grid item>
@@ -55,7 +55,7 @@ export default function NavMenu() {
                   sx={{
                     fontSize: "14px",
                     fontWeight: 400,
-                    color: "primary.main",
+                    color: "primary.light",
                     letterSpacing: 2,
                   }}
                 >
@@ -71,6 +71,7 @@ export default function NavMenu() {
               sx={{
                 fontWeight: "700",
                 fontSize: { xs: 18, sm: 24, lg: 40 },
+                textAlign: "center",
               }}
               color="primary.main"
             >
