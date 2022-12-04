@@ -2,8 +2,8 @@ import React, { memo } from "react";
 import Link from "next/link";
 import { Box, Drawer, Typography, Stack } from "@mui/material";
 
-import MenuTypography from "components/common/menuTitles";
-import { useRouter } from "next/router";
+import MenuTypography from "components/common/menu-titles";
+
 import Category from "./category";
 
 type Props = {
@@ -24,7 +24,7 @@ function DrawerMenu({ openDrawer, closeDrawer }: Props) {
         },
       }}
     >
-      <Stack spacing={5} px={{ xs: 2.5 }}>
+      <Stack spacing={{ xs: 7, sm: 5 }} px={{ xs: 2.5 }}>
         <Box sx={{ borderBottom: "2px solid #DADADA", pb: 2 }}>
           <Typography
             sx={{
@@ -42,7 +42,7 @@ function DrawerMenu({ openDrawer, closeDrawer }: Props) {
             display: "flex",
             justifyContent: "flex-start",
           }}
-          spacing={5}
+          spacing={7}
         >
           <Link href={"/"} onClick={closeDrawer}>
             <MenuTypography title="Home" />

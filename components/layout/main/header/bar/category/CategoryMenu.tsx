@@ -2,7 +2,7 @@ import React, { memo, useEffect } from "react";
 
 import Link from "next/link";
 import { Collapse, Stack } from "@mui/material";
-import CategoryTitles from "components/common/categoryTitles";
+import CategoryTitles from "components/common/category-titles";
 import { useRouter } from "next/router";
 
 type Props = {

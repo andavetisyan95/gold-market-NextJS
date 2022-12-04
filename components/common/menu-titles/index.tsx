@@ -18,7 +18,7 @@ export default function MenuTypography({ title }: Props) {
         className="drawer_text_hover"
         sx={{
           color: "black",
-          fontSize: { xs: 20, sm: 18 },
+          fontSize: { xs: 18, sm: 20 },
         }}
       >
         {title}
