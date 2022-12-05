@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Box, Grid, Hidden, Typography } from "@mui/material";
 import { Drawer } from ".";
 import MenuIcon from "@mui/icons-material/Menu";
+import Search from "./search";
 
 export default function NavMenu() {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -27,7 +28,7 @@ export default function NavMenu() {
         top: 0,
         right: 0,
         zIndex: 1,
-        background: changeBackground ? "#121d23" : "transparent",
+        background: changeBackground ? "rgba(18, 29, 35,0.4)" : "transparent",
         position: "sticky",
       }}
     >
@@ -36,7 +37,7 @@ export default function NavMenu() {
         sx={{
           justifyContent: "space-between",
           alignItems: "center",
-          px: 10,
+          px: { xs: 4, sm: 6, md: 10 },
           py: 2,
         }}
       >
@@ -65,19 +66,24 @@ export default function NavMenu() {
             </Hidden>
           </Grid>
         </Grid>
+        <Hidden smDown>
+          <Grid item>
+            <Link href={"/"}>
+              <Typography
+                sx={{
+                  fontWeight: "700",
+                  fontSize: { xs: 18, sm: 24, lg: 40 },
+                  textAlign: "center",
+                }}
+                color="primary.main"
+              >
+                The Carats
+              </Typography>
+            </Link>
+          </Grid>
+        </Hidden>
         <Grid item>
-          <Link href={"/"}>
-            <Typography
-              sx={{
-                fontWeight: "700",
-                fontSize: { xs: 18, sm: 24, lg: 40 },
-                textAlign: "center",
-              }}
-              color="primary.main"
-            >
-              The Carats
-            </Typography>
-          </Link>
+          <Search />
         </Grid>
       </Grid>
       <Drawer
