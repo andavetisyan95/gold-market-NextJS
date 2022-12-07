@@ -28,7 +28,7 @@ export default function NavMenu() {
         top: 0,
         right: 0,
         zIndex: 1,
-        background: changeBackground ? "rgba(18, 29, 35,0.5)" : "transparent",
+        background: changeBackground ? "rgba(18, 29, 35,0.7)" : "transparent",
         position: "sticky",
       }}
     >

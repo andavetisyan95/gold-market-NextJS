@@ -58,3 +58,44 @@ a {
 .text_sparkle:hover {
   text-shadow: 0 0 10px #baab36, 0 0 20px #baab36, 0 0 40px #baab36;
 }
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.cat_typography {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #fff;
+}
+
+.explore {
+  position: relative;
+}
+
+.explore::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #eead2b;
+  position: absolute;
+  transition: 0.5s;
+  bottom: -5px;
+}
+
+.explore:hover::after {
+  width: 100%;
+}
+
+.typography_hover:hover {
+  color: #eead2b;
+}
