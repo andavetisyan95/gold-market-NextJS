@@ -16,16 +16,10 @@ export default function MainLayout({ children, title }: MainLayoutProps) {
       <Head>
         <title>{title}</title>
       </Head>
-      <Box>
-        <Header />
-      </Box>
-
+      <Header />
       {/* <Box sx={{ px: 10, mt: 12, mb: 1, position: "relative" }}> */}
       <Stack>{children}</Stack>
-
-      <Box>
-        <Footer />
-      </Box>
+      <Footer />
     </>
   );
 }

@@ -54,3 +54,7 @@ a {
   position: relative;
   transition: 0.5s;
 }
+
+.text_sparkle:hover {
+  text-shadow: 0 0 10px #baab36, 0 0 20px #baab36, 0 0 40px #baab36;
+}

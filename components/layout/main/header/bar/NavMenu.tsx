@@ -28,7 +28,7 @@ export default function NavMenu() {
         top: 0,
         right: 0,
         zIndex: 1,
-        background: changeBackground ? "rgba(18, 29, 35,0.4)" : "transparent",
+        background: changeBackground ? "rgba(18, 29, 35,0.5)" : "transparent",
         position: "sticky",
       }}
     >
@@ -37,7 +37,7 @@ export default function NavMenu() {
         sx={{
           justifyContent: "space-between",
           alignItems: "center",
-          px: { xs: 4, md: 6 },
+          px: { xs: 3, md: 6, xl: 10 },
           py: 2,
         }}
       >
@@ -74,8 +74,10 @@ export default function NavMenu() {
                   fontWeight: "700",
                   fontSize: { xs: 18, sm: 24, lg: 40 },
                   textAlign: "center",
+                  letterSpacing: "2px",
                 }}
                 color="primary.main"
+                className="text_sparkle"
               >
                 The Carats
               </Typography>

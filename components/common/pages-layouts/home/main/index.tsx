@@ -1,11 +1,12 @@
 import React from "react";
 import { Box, Button, Paper, Stack, Typography } from "@mui/material";
+import Link from "next/link";
 
 type Props = {};
 
 export default function HomeMain({}: Props) {
   return (
-    <Box sx={{ px: { xs: 3, md: 6, lg: 25 } }}>
+    <Box sx={{ px: { xs: 3, md: 6, xl: 20 } }}>
       <Stack
         spacing={8}
         sx={{
@@ -20,7 +21,7 @@ export default function HomeMain({}: Props) {
           sx={{
             fontStyle: "normal",
             fontWeight: 700,
-            fontSize: { xs: 24, sm: 28, md: 36, lg: 40 },
+            fontSize: { xs: 24, sm: 28, md: 36, lg: 45 },
             textAlign: "center",
             color: "#fcaf14",
           }}
@@ -40,26 +41,28 @@ export default function HomeMain({}: Props) {
         >
           We always create new and unique collections
         </Typography>
-        <Button
-          sx={{
-            border: "1px solid #fcaf14",
-            borderRadius: 0,
-            padding: { xs: "15px", sm: "10px", md: "8px" },
-            width: { sm: 150, md: 180 },
-            height: { xs: "40px", sm: 50, md: 55 },
-            fontSize: { xs: 10, sm: 14, md: 16 },
-            color: "#baab36",
-            letterSpacing: { xs: "1px", md: "2px" },
-            "&:hover": {
-              border: "3px solid #fcaf14",
-              color: "primary.light",
-              background: "black",
-              fontWeight: "bold",
-            },
-          }}
-        >
-          Explore More
-        </Button>
+        <Link href="/category">
+          <Button
+            sx={{
+              border: "1px solid #fcaf14",
+              borderRadius: 0,
+              padding: { xs: "15px", sm: "10px", md: "8px" },
+              width: { sm: 150, md: 180 },
+              height: { xs: "40px", sm: 50, md: 55 },
+              fontSize: { xs: 10, sm: 14, md: 16 },
+              color: "#baab36",
+              letterSpacing: { xs: "1px", md: "2px" },
+              "&:hover": {
+                border: "3px solid #fcaf14",
+                color: "primary.light",
+                background: "black",
+                fontWeight: "bold",
+              },
+            }}
+          >
+            Explore More
+          </Button>
+        </Link>
       </Stack>
     </Box>
   );
