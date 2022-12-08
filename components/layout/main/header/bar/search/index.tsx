@@ -5,15 +5,13 @@ import SearchIcon from "@mui/icons-material/Search";
 type Props = {};
 
 export default function Search({}: Props) {
-  const [expandInput, setExpandInput] = useState(false);
   return (
     <Box>
       <InputBase
-        onClick={() => setExpandInput(prev => !prev)}
         autoComplete="false"
         placeholder="Search"
         sx={{
-          width: { xs: 220, sm: expandInput ? "250px" : "220px" },
+          width: "220px",
           height: { xs: 35, sm: 40 },
           border: "2px solid #baab36",
           padding: "10px",
@@ -22,7 +20,7 @@ export default function Search({}: Props) {
         inputProps={{
           sx: {
             color: "white",
-            fontSize: { xs: 14, sm: 18 },
+            fontSize: { xs: 14 },
             ml: "5px",
           },
         }}

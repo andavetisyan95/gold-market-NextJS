@@ -37,7 +37,7 @@ export default function NavMenu() {
         sx={{
           justifyContent: "space-between",
           alignItems: "center",
-          px: { xs: 3, md: 6, xl: 10 },
+          px: { xs: 3, md: 5, lg: 8, xl: 12 },
           py: 2,
         }}
       >

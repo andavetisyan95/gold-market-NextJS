@@ -6,7 +6,7 @@ type Props = {};
 
 export default function HomeMain({}: Props) {
   return (
-    <Box sx={{ px: { xs: 3, md: 6, xl: 20 } }}>
+    <Box sx={{ px: { xs: 3, md: 6, lg: 8, xl: 20 } }}>
       <Stack
         spacing={8}
         sx={{

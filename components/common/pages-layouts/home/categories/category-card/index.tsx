@@ -56,6 +56,7 @@ export default function CategoryCard({
           <Typography
             sx={{
               textAlign: "center",
+              fontStyle: "oblique",
             }}
             className="cat_typography"
           >
