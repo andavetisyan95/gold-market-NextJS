@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Box, Grid, Hidden, Typography } from "@mui/material";
 import { Drawer } from ".";
-import MenuIcon from "@mui/icons-material/Menu";
 import Search from "./search";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export default function NavMenu() {
   const [openDrawer, setOpenDrawer] = useState(false);
