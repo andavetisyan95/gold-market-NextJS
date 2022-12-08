@@ -21,10 +21,9 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Inter:wght@200;300;400;500;600;700&family=Quintessential&family=Roboto:ital@1&family=Shadows+Into+Light&display=swap"
           rel="stylesheet"
         />
-
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Comfortaa:wght@600;700&family=Inter:wght@200;300;400;500;600;700&family=Quintessential&family=Roboto:ital@1&family=Shadows+Into+Light&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Comfortaa:wght@600;700&family=Inter:wght@200;300;400;500;600;700&family=Quintessential&family=Roboto:ital@1&family=Shadows+Into+Light&display=swap"
           rel="stylesheet"
         />
       </Head>

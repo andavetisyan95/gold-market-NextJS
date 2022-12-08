@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import { Box, Typography, Stack } from "@mui/material";
+import { Box, Typography, Stack, Collapse } from "@mui/material";
 import Link from "next/link";
-
-type CardProps = {
-  imgName: string;
-  title: string;
-  description: string;
-};
+import { CommonProps } from "types/home-page-common";
 
 export default function CategoryCard({
   imgName,
   title,
   description,
-}: CardProps) {
+}: CommonProps) {
   const [showLink, setShowLink] = useState(false);
 
   return (
@@ -32,6 +27,7 @@ export default function CategoryCard({
         src={imgName}
         alt={imgName}
         style={{ objectFit: "cover", width: "100%", height: "auto" }}
+        loading="lazy"
       />
 
       <Stack
@@ -55,7 +51,7 @@ export default function CategoryCard({
               textTransform: "uppercase",
               fontSize: { sm: 24, md: 20, lg: 32 },
             }}
-            className="cat_typography"
+            className="cat_typography mouse"
           >
             {title}
           </Typography>
@@ -64,13 +60,13 @@ export default function CategoryCard({
               textAlign: "center",
               fontStyle: "oblique",
             }}
-            className="cat_typography"
+            className="cat_typography mouse"
           >
             {description}
           </Typography>
         </Stack>
         <Box>
-          {showLink && (
+          <Collapse in={showLink} timeout={600}>
             <Link href={`/category/${title}`} className="explore">
               <Typography
                 className="cat_typography typography_hover"
@@ -79,7 +75,7 @@ export default function CategoryCard({
                 Explore All
               </Typography>
             </Link>
-          )}
+          </Collapse>
         </Box>
       </Stack>
     </Stack>

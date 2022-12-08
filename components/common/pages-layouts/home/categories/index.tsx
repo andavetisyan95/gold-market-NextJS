@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Stack, Grid, Typography } from "@mui/material";
-import { categoryCardInfo } from "source/categoryCardInfo";
+import { categoryCardInfo } from "source/category-cardinfo";
 import CategoryCard from "./category-card";
 
 export default function CategoriesGrid() {
   return (
     <Stack
       sx={{
-        mt: { xs: 20, md: 15, lg: 10 },
+        pt: { xs: 25, md: 18, lg: 10 },
+        pb: 5,
         px: { xs: 3, md: 6, xl: 10 },
-        py: { xs: 8, lg: 4 },
         gap: { xs: 5, sm: 8, md: 6 },
       }}
       className="center"

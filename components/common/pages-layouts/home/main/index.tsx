@@ -6,7 +6,7 @@ type Props = {};
 
 export default function HomeMain({}: Props) {
   return (
-    <Box sx={{ px: { xs: 3, md: 6, lg: 8, xl: 20 } }}>
+    <Box sx={{ px: { xs: 3, md: 6, lg: 8, xl: 20 }, pb: 5 }}>
       <Stack
         spacing={8}
         sx={{
@@ -25,6 +25,7 @@ export default function HomeMain({}: Props) {
             textAlign: "center",
             color: "#fcaf14",
           }}
+          className="mouse"
         >
           Elegant and modern jewelry for your every occasion
         </Typography>
@@ -38,6 +39,7 @@ export default function HomeMain({}: Props) {
             color: "primary.light",
             letterSpacing: "2px",
           }}
+          className="mouse"
         >
           We always create new and unique collections
         </Typography>

@@ -21,6 +21,16 @@ export const theme = createTheme({
       },
     },
     MuiButton: {
+      styleOverrides: {
+        root: {
+          "&:hover": {
+            background: "#BE8E50",
+            fontWeight: "bold",
+            color: "#fff",
+            border: "2px solid #fff",
+          },
+        },
+      },
       defaultProps: {
         disableRipple: true,
       },

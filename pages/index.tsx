@@ -12,10 +12,10 @@ export default function Home({}: Props) {
   return (
     <>
       <WithBackground coverImg="/images/backgrounds/home/back.jpg" />
-      <Stack sx={{ mt: 12, mb: 1, position: "relative" }}>
+      <Stack sx={{ pt: 12, pb: 5, position: "relative" }}>
         <HomeMain />
-        <OurMission />
         <CategoriesGrid />
+        <OurMission />
       </Stack>
     </>
   );
