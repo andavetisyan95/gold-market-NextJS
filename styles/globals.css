@@ -98,3 +98,46 @@ a {
 .typography_hover:hover {
   color: #eead2b;
 }
+
+.cat_borders::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-out 0s;
+  transform: scaleY(0);
+}
+
+.cat_borders::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+  transform: scaleX(0);
+}
+
+.cat_borders:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: all 0.5s ease-out 0s;
+}
+.cat_borders:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: all 0.5s ease-out;
+}

@@ -24,7 +24,7 @@ export default function CategoryCard({
         width: "100%",
         height: "100%",
       }}
-      className="center"
+      className="center cat_borders"
       onMouseEnter={() => setShowLink(prev => !prev)}
       onMouseLeave={() => setShowLink(prev => !prev)}
     >
@@ -33,12 +33,17 @@ export default function CategoryCard({
         alt={imgName}
         style={{ objectFit: "cover", width: "100%", height: "auto" }}
       />
+
       <Stack
         sx={{
-          px: { xs: 3 },
           position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
           justifyContent: "center",
           alignItems: "center",
+          width: "90%",
+          zIndex: 1,
         }}
         spacing={{ xs: 3, md: 4, lg: 6 }}
       >
