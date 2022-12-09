@@ -5,9 +5,18 @@ type Props = {};
 
 export default function OurProducts({}: Props) {
   return (
-    <Stack sx={{ pt: 15 }}>
+    <Stack
+      className="center"
+      sx={{
+        pt: { xs: 10, md: 12 },
+        px: { xs: 5, sm: 10, md: 8, xl: 10 },
+      }}
+      spacing={5}
+    >
       <Box>
-        <Typography>Our Jewelry Selection</Typography>
+        <Typography sx={{ fontSize: { xs: 22, sm: 24, md: 28, lg: 42 } }}>
+          Our Jewelry Selection
+        </Typography>
       </Box>
       <Box>
         <Grid container></Grid>

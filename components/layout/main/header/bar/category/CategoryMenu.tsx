@@ -32,8 +32,8 @@ function CategoryMenu({ openCategories, close }: Props) {
         <Link href="/category/necklaces">
           <CategoryTitles title="Necklaces" />
         </Link>
-        <Link href="/category/braceletes">
-          <CategoryTitles title="Braceletes" />
+        <Link href="/category/bracelets">
+          <CategoryTitles title="Bracelets" />
         </Link>
       </Stack>
     </Collapse>

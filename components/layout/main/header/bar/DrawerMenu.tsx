@@ -47,7 +47,7 @@ function DrawerMenu({ openDrawer, closeDrawer }: Props) {
               fontSize: { xs: 24 },
               fontWeight: 600,
             }}
-            className="clickable"
+            className="mouse"
           >
             Menu
           </Typography>

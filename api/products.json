@@ -1,10 +1,9 @@
 {
-  "products": [
+  "rings": [
     {
       "id": 1,
       "title": "Ring1",
       "subtitle": "Lorem ipsum dolor",
-      "category": "rings",
       "price": 800,
       "description": "Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton.",
       "image": "/images/products/rings/diamondRing.jpg"
@@ -13,25 +12,24 @@
       "id": 2,
       "title": "Ring2",
       "subtitle": "Lorem ipsum dolor",
-      "category": "rings",
       "price": 450,
-      "description": "Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton.",
-      "image": "/images/products/rings/ring2.jpg"
+      "description": "Round neckline, short sleeves. Made of extra long staple pima cotton.",
+      "image": "/images/products/rings/diamondRing.jpg"
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "Ring3",
       "subtitle": "Lorem ipsum dolor",
-      "category": "rings",
       "price": 300,
       "description": " Round neckline,regular fit, short sleeves. Made of extra long staple pima cotton.",
-      "image": "/images/products/rings/ring3.jpg"
-    },
+      "image": "/images/products/rings/diamondRing.jpg"
+    }
+  ],
+  "earrings": [
     {
       "id": 4,
       "title": "Earring1",
       "subtitle": "Lorem ipsum dolor",
-      "category": "earrings",
       "price": 500,
       "description": "Printed on rigid matt paper and smooth surface.",
       "image": "/images/products/earrings/earring.jpg"
@@ -40,25 +38,24 @@
       "id": 5,
       "title": "Earring2",
       "subtitle": "Lorem ipsum dolor",
-      "category": "earrings",
       "price": 700,
       "description": "Printed on matt paper and smooth surface.",
-      "image": "/images/products/earrings/earring2.jpg"
+      "image": "/images/products/earrings/earring.jpg"
     },
     {
       "id": 6,
       "title": "Earring3",
       "subtitle": "Lorem ipsum dolor",
-      "category": "earrings",
       "price": 900,
       "description": "Printed on rigid matt paper and smooth surface joki asd.",
-      "image": "/images/products/earrings/earring3.jpg"
-    },
+      "image": "/images/products/earrings/earring.jpg"
+    }
+  ],
+  "braceletes": [
     {
       "id": 7,
       "title": "Bracelet1",
       "subtitle": "Lorem ipsum dolor",
-      "category": "bracelets",
       "price": 1200,
       "description": "Printed on rigid matt paper and smooth surface.",
       "image": "/images/products/braceletes/bracelete.jpg"
@@ -67,25 +64,24 @@
       "id": 8,
       "title": "Bracelet2",
       "subtitle": "Lorem ipsum dolor",
-      "category": "bracelets",
       "price": 1400,
       "description": "Printed on rigid matt paper and smooth surface.",
-      "image": "/images/products/braceletes/bracelet2.jpg"
+      "image": "/images/products/braceletes/bracelete.jpg"
     },
     {
       "id": 9,
       "title": "Bracelet3",
       "subtitle": "Lorem ipsum dolor",
-      "category": "bracelets",
       "price": 700,
       "description": "Printed on rigid matt paper and jsons placeholder smooth surface.",
-      "image": "/images/products/braceletes/bracelet3.jpg"
-    },
+      "image": "/images/products/braceletes/bracelete.jpg"
+    }
+  ],
+  "necklaces": [
     {
       "id": 10,
       "title": "Necklace1",
       "subtitle": "Lorem ipsum dolor",
-      "category": "necklaces",
       "price": 850,
       "description": "Give your walls a voice with a framed poster.",
       "image": "/images/products/necklaces/necklace.jpg"
@@ -94,19 +90,17 @@
       "id": 11,
       "title": "Necklace2",
       "subtitle": "Lorem ipsum dolor",
-      "category": "necklaces",
       "price": 1150,
       "description": "Give your walls bols mind a voice with a framed poster.",
-      "image": "/images/products/necklaces/necklace2.jpg"
+      "image": "/images/products/necklaces/necklace.jpg"
     },
     {
       "id": 12,
       "title": "Necklace3",
       "subtitle": "Lorem ipsum dolor",
-      "category": "necklaces",
       "price": 1450,
       "description": "Give your sadssf walls bols ddf mind a voice with a framed poster.",
-      "image": "/images/products/necklaces/necklace3.jpg"
+      "image": "/images/products/necklaces/necklace.jpg"
     }
   ]
 }
