@@ -17,7 +17,7 @@ export default function CategoriesGrid() {
       <Typography sx={{ color: "silver", fontSize: { xs: 24, sm: 30 } }}>
         Jewelry by Categories
       </Typography>
-      <Grid container xs={12} spacing={5} justifyContent="center">
+      <Grid container spacing={5} justifyContent="center">
         {categoryCardInfo.map(({ id, title, description, imgName }) => (
           <Grid item key={id} xs={12} sm={10} md={6}>
             <CategoryCard

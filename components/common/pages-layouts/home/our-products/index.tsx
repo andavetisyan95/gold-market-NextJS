@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { Stack, Grid, Box, Typography } from "@mui/material";
+import { ProductProps } from "types/home-page-common";
+import axios from "axios";
+import { NextPageContext } from "next";
+import ProductCard from "components/common/product-card";
 
-type Props = {};
+export default function OurProducts() {
+  const [allProducts, setAllProducts] = useState<ProductProps[]>([]);
+  const getAllProducts = useCallback(async () => {
+    await axios
+      .get("http://localhost:8000/products?_limit=4")
+      .then(response => setAllProducts(response.data))
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
 
-export default function OurProducts({}: Props) {
+  useEffect(() => {
+    getAllProducts();
+  }, [getAllProducts]);
+
   return (
     <Stack
       className="center"
@@ -19,7 +35,19 @@ export default function OurProducts({}: Props) {
         </Typography>
       </Box>
       <Box>
-        <Grid container></Grid>
+        <Grid container spacing={5}>
+          {allProducts.map(({ id, title, subtitle, image, price }) => (
+            <Grid item xs={12} sm={6} md={3} key={`${title}_{id}`}>
+              <ProductCard
+                title={title}
+                subtitle={subtitle}
+                image={image}
+                price={price}
+                id={id}
+              />
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </Stack>
   );
