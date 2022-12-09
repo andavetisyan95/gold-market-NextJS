@@ -26,6 +26,8 @@ export const theme = createTheme({
           "&:hover": {
             background: "#BE8E50",
             fontWeight: "bold",
+            fontStyle: "normal",
+            textAlign: "center",
             color: "#fff",
             border: "2px solid #fff",
           },

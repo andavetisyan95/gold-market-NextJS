@@ -10,7 +10,7 @@ export default function RightSide() {
           position: "relative",
           backgroundSize: "contain",
           backgroundPosition: "center",
-          width: { xs: "100%", sm: "auto" },
+          width: { xs: "100%", sm: "auto", lg: "65%" },
           height: { xs: "100%", sm: "auto" },
           alignSelf: "flex-start",
         }}
@@ -39,14 +39,14 @@ export default function RightSide() {
         <Link href="/about">
           <Button
             sx={{
-              letterSpacing: "1.5px",
+              letterSpacing: "2px",
               width: { xs: "150px", sm: "130px", md: "180px", lg: "200px" },
               height: { xs: "45px", lg: "50px" },
               border: "1px solid #fff",
               fontSize: { sm: 11, md: 14 },
             }}
           >
-            Explore More
+            Learn More
           </Button>
         </Link>
       </Stack>

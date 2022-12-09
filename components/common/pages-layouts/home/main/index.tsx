@@ -62,7 +62,7 @@ export default function HomeMain({}: Props) {
               },
             }}
           >
-            Explore More
+            Discover Now
           </Button>
         </Link>
       </Stack>
