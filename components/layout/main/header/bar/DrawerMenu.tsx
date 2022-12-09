@@ -21,9 +21,23 @@ function DrawerMenu({ openDrawer, closeDrawer }: Props) {
         sx: {
           width: { xs: "100vw", sm: "380px" },
           pt: 4,
+          position: "relative",
         },
       }}
     >
+      <Typography
+        sx={{
+          color: "primary.light",
+          fontWeight: "bold",
+          position: "absolute",
+          right: 10,
+          top: 10,
+        }}
+        onClick={closeDrawer}
+        className="clickable"
+      >
+        X
+      </Typography>
       <Stack spacing={{ xs: 7, sm: 5 }} px={{ xs: 2.5 }}>
         <Box sx={{ borderBottom: "2px solid #DADADA", pb: 2 }}>
           <Typography
@@ -33,7 +47,6 @@ function DrawerMenu({ openDrawer, closeDrawer }: Props) {
               fontSize: { xs: 24 },
               fontWeight: 600,
             }}
-            onClick={closeDrawer}
             className="clickable"
           >
             Menu

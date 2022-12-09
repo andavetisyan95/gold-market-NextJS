@@ -5,6 +5,7 @@ import HomeMain from "components/common/pages-layouts/home/main";
 import WithBackground from "components/common/layout-with-background";
 import CategoriesGrid from "components/common/pages-layouts/home/categories";
 import OurMission from "components/common/pages-layouts/home/our-mission";
+import OurProducts from "components/common/pages-layouts/home/our-products";
 
 type Props = {};
 
@@ -16,6 +17,7 @@ export default function Home({}: Props) {
         <HomeMain />
         <CategoriesGrid />
         <OurMission />
+        <OurProducts />
       </Stack>
     </>
   );

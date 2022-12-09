@@ -1,83 +1,106 @@
 {
-  "products": [
+  "rings": [
     {
-      "rings": [
-        {
-          "id": "1",
-          "title": "Ring1",
-          "price": 800,
-          "description": "Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton.",
-          "image": "/images/products/rings/diamondRing.jpg"
-        },
-        {
-          "id": "2",
-          "title": "Ring2",
-          "price": 450,
-          "description": "Round neckline, short sleeves. Made of extra long staple pima cotton.",
-          "image": "/images/products/rings/diamondRing.jpg"
-        },
-        {
-          "id": "3",
-          "title": "Ring3",
-          "price": 300,
-          "description": " Round neckline,regular fit, short sleeves. Made of extra long staple pima cotton.",
-          "image": "/images/products/rings/diamondRing.jpg"
-        }
-      ]
+      "id": "1",
+      "title": "Ring1",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 800,
+      "description": "Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton.",
+      "image": "/images/products/rings/diamondRing.jpg"
     },
     {
-      "earrings": [
-        {
-          "id": "4",
-          "title": "Earring1",
-          "price": 500,
-          "description": "Printed on rigid matt paper and smooth surface.",
-          "image": "/images/products/earrings/earring.jpg"
-        },
-        {
-          "id": "5",
-          "title": "Earring2",
-          "price": 700,
-          "description": "Printed on matt paper and smooth surface.",
-          "image": "/images/products/earrings/earring.jpg"
-        },
-        {
-          "id": "6",
-          "title": "Earring3",
-          "price": 900,
-          "description": "Printed on rigid matt paper and smooth surface joki asd.",
-          "image": "/images/products/earrings/earring.jpg"
-        }
-      ]
+      "id": "2",
+      "title": "Ring2",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 450,
+      "description": "Round neckline, short sleeves. Made of extra long staple pima cotton.",
+      "image": "/images/products/rings/diamondRing.jpg"
     },
     {
-      "braceletes": [
-        {
-          "id": "7",
-          "title": "Bracelet1",
-          "price": 1200,
-          "description": "Printed on rigid matt paper and smooth surface.",
-          "image": "/images/products/braceletes/bracelete.jpg"
-        },
-        {
-          "id": "8",
-          "title": "Bracelet2",
-          "price": 1400,
-          "description": "Printed on rigid matt paper and smooth surface.",
-          "image": "/images/products/braceletes/bracelete.jpg"
-        }
-      ]
+      "id": "3",
+      "title": "Ring3",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 300,
+      "description": " Round neckline,regular fit, short sleeves. Made of extra long staple pima cotton.",
+      "image": "/images/products/rings/diamondRing.jpg"
+    }
+  ],
+  "earrings": [
+    {
+      "id": "4",
+      "title": "Earring1",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 500,
+      "description": "Printed on rigid matt paper and smooth surface.",
+      "image": "/images/products/earrings/earring.jpg"
     },
     {
-      "necklaces": [
-        {
-          "id": "1",
-          "title": "Necklace1",
-          "price": 850,
-          "description": "Give your walls a voice with a framed poster.",
-          "image": "/images/products/necklaces/necklace.jpg"
-        }
-      ]
+      "id": "5",
+      "title": "Earring2",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 700,
+      "description": "Printed on matt paper and smooth surface.",
+      "image": "/images/products/earrings/earring.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Earring3",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 900,
+      "description": "Printed on rigid matt paper and smooth surface joki asd.",
+      "image": "/images/products/earrings/earring.jpg"
+    }
+  ],
+  "braceletes": [
+    {
+      "id": "7",
+      "title": "Bracelet1",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 1200,
+      "description": "Printed on rigid matt paper and smooth surface.",
+      "image": "/images/products/braceletes/bracelete.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Bracelet2",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 1400,
+      "description": "Printed on rigid matt paper and smooth surface.",
+      "image": "/images/products/braceletes/bracelete.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Bracelet3",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 700,
+      "description": "Printed on rigid matt paper and jsons placeholder smooth surface.",
+      "image": "/images/products/braceletes/bracelete.jpg"
+    }
+  ],
+  "necklaces": [
+    {
+      "id": "10",
+      "title": "Necklace1",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 850,
+      "description": "Give your walls a voice with a framed poster.",
+      "image": "/images/products/necklaces/necklace.jpg"
+    },
+    {
+      "id": "11",
+      "title": "Necklace2",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 1150,
+      "description": "Give your walls bols mind a voice with a framed poster.",
+      "image": "/images/products/necklaces/necklace.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Necklace3",
+      "subtitle": "Lorem ipsum dolor",
+      "price": 1450,
+      "description": "Give your sadssf walls bols ddf mind a voice with a framed poster.",
+      "image": "/images/products/necklaces/necklace.jpg"
     }
   ]
 }
