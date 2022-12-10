@@ -37,11 +37,10 @@ export default function CategoryCard({
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          justifyContent: "center",
-          alignItems: "center",
           width: "90%",
           zIndex: 1,
         }}
+        className="center"
         spacing={{ xs: 3, md: 4, lg: 6 }}
       >
         <Stack spacing={1} className="center">

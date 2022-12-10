@@ -1,10 +1,19 @@
 import React, { useState } from "react";
-import { Box, InputBase } from "@mui/material";
+import { Box, Collapse, InputBase, Typography, Stack } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 type Props = {};
 
 export default function Search({}: Props) {
+  // const [showResults, setShowResults] = useState(false);
+  // const [result, setResult] = useState("");
+  // const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (e.target.value.length >= 1) {
+  //     return setShowResults(true);
+  //   } else {
+  //     setShowResults(false);
+  //   }
+  // };
   return (
     <Box>
       <InputBase

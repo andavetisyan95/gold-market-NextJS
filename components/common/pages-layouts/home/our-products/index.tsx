@@ -2,7 +2,6 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Stack, Grid, Box, Typography } from "@mui/material";
 import { ProductProps } from "types/home-page-common";
 import axios from "axios";
-import { NextPageContext } from "next";
 import ProductCard from "components/common/product-card";
 
 export default function OurProducts() {

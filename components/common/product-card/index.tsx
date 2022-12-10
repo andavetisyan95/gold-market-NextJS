@@ -35,16 +35,25 @@ export default function ProductCard({
             color: "primary.main",
             fontWeight: "bold",
           }}
+          className="mouse"
         >
           {title}
         </Typography>
-        <Typography sx={{ fontSize: { xs: 14, sm: 12, md: 14 } }}>
+        <Typography
+          className="mouse"
+          sx={{ fontSize: { xs: 14, sm: 12, md: 14 } }}
+        >
           {subtitle}
         </Typography>
-        <Typography sx={{ fontWeight: "bold", fontSize: { sm: 14, md: 16 } }}>
+        <Typography
+          className="mouse"
+          sx={{ fontWeight: "bold", fontSize: { sm: 14, md: 16 } }}
+        >
           ${price}
         </Typography>
       </Stack>
     </Stack>
   );
 }
+
+// you have to go to the square and before you reach it you will see a street going down on your left
