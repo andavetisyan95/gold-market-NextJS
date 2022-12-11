@@ -24,7 +24,7 @@ export default function CategoryCard({
       onMouseLeave={() => setShowLink(prev => !prev)}
     >
       <img
-        src={imgName}
+        src={imgName || "/images/fallback/placeholder.jpg"}
         alt={imgName}
         style={{ objectFit: "cover", width: "100%", height: "auto" }}
         loading="lazy"
