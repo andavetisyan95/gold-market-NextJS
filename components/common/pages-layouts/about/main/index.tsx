@@ -2,28 +2,19 @@ import React from "react";
 import { Box, Stack, Typography, Grid } from "@mui/material";
 import Link from "next/link";
 
-type Props = {};
-
-export default function AboutMain({}: Props) {
+export default function AboutMain() {
   return (
-    <Box
-      sx={{
-        position: "absolute",
-        width: "100%",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-      }}
-    >
+    <Box sx={{ mt: { xs: "30vh", lg: "25vh" } }}>
       <Stack spacing={3} className="center">
         <Typography
           sx={{
             textTransform: "uppercase",
             textAlign: "center",
-            fontSize: { xs: 36, sm: 48, md: 60, lg: 80 },
+            fontSize: { xs: 40, sm: 52, md: 60, lg: 80 },
             fontWeight: "bold",
           }}
           variant="h2"
+          className="mouse"
         >
           Tell your story
         </Typography>
@@ -34,6 +25,7 @@ export default function AboutMain({}: Props) {
             fontSize: { xs: 16, md: 18 },
           }}
           variant="h6"
+          className="mouse"
         >
           Our story is all about your style.
         </Typography>

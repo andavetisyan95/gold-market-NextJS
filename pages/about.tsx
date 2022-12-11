@@ -3,13 +3,11 @@ import { Stack } from "@mui/material";
 import AboutMain from "components/common/pages-layouts/about/main";
 import WithBackground from "components/common/layout-with-background";
 
-type Props = {};
-
-export default function AboutUs({}: Props) {
+export default function AboutUs() {
   return (
     <>
       <WithBackground coverImg="/images/backgrounds/about/aboutmain.jpg" />
-      <Stack sx={{ pb: 5 }}>
+      <Stack sx={{ pb: 5, position: "relative" }}>
         <AboutMain />
       </Stack>
     </>

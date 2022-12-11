@@ -7,7 +7,7 @@ export default function CategoriesGrid() {
   return (
     <Stack
       sx={{
-        pt: { xs: 25, md: 18, lg: 10 },
+        pt: { xs: 20, md: 18, lg: 10 },
         pb: 5,
         px: { xs: 3, md: 6, xl: 10 },
         gap: { xs: 5, sm: 8, md: 6 },
