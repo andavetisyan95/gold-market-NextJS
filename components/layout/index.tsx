@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Box, Stack } from "@mui/material";
 import Header from "./main/header";
 import Footer from "./main/footer";
+import { useRouter } from "next/router";
 
 type MainLayoutProps = {
   title: string;
@@ -11,6 +12,7 @@ type MainLayoutProps = {
 };
 
 export default function MainLayout({ children, title }: MainLayoutProps) {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -19,7 +21,7 @@ export default function MainLayout({ children, title }: MainLayoutProps) {
       <Header />
       {/* <Box sx={{ px: 10, mt: 12, mb: 1, position: "relative" }}> */}
       <Stack>{children}</Stack>
-      <Footer />
+      <Box>{router.asPath !== "/contacts" && <Footer />}</Box>
     </>
   );
 }
