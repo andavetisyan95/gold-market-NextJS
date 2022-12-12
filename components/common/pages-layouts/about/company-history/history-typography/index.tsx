@@ -9,7 +9,7 @@ export default function HistoryTypography({ text }: Props) {
   return (
     <Typography
       sx={{
-        fontSize: { xs: 12, sm: 14, md: 12, lg: 14 },
+        fontSize: { xs: 12, sm: 13, md: 12, lg: 14 },
         lineHeight: "24px",
       }}
       className="mouse"

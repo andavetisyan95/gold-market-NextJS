@@ -12,7 +12,7 @@ type Props = {};
 export default function Home({}: Props) {
   return (
     <>
-      <WithBackground coverImg="/images/backgrounds/home/back.jpg" />
+      <WithBackground coverImg="/images/backgrounds/home/mainPage.jpg" />
       <Stack sx={{ pt: 12, pb: 5, position: "relative" }}>
         <HomeMain />
         <CategoriesGrid />
