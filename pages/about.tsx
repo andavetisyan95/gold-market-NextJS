@@ -1,10 +1,10 @@
 import React from "react";
 import { Stack, Box } from "@mui/material";
-import AboutMain from "components/common/pages-layouts/about/main";
+import AboutMain from "components/pages-layouts/about/main";
 import WithBackground from "components/common/layout-with-background";
-import History from "components/common/pages-layouts/about/company-history";
-import OurServices from "components/common/pages-layouts/home/our-mission/our-services";
-import OurGoals from "components/common/pages-layouts/about/about-goals";
+import History from "components/pages-layouts/about/company-history";
+import OurServices from "components/pages-layouts/home/our-mission/our-services";
+import OurGoals from "components/pages-layouts/about/about-goals";
 
 export default function AboutUs() {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
 import { Stack } from "@mui/material";
 
-import HomeMain from "components/common/pages-layouts/home/main";
+import HomeMain from "components/pages-layouts/home/main";
 import WithBackground from "components/common/layout-with-background";
-import CategoriesGrid from "components/common/pages-layouts/home/categories";
-import OurMission from "components/common/pages-layouts/home/our-mission";
-import OurProducts from "components/common/pages-layouts/home/our-products";
+import CategoriesGrid from "components/pages-layouts/home/categories";
+import OurMission from "components/pages-layouts/home/our-mission";
+import OurProducts from "components/pages-layouts/home/our-products";
 
 type Props = {};
 
