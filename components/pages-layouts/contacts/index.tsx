@@ -9,34 +9,39 @@ type Props = {};
 
 export default function ContactsPage({}: Props) {
   return (
-    <Box
-      sx={{
-        position: "absolute",
-        top: 0,
-        height: "30vh",
-        width: "100%",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <img
-        src="/images/backgrounds/contacts/st.jpg"
-        alt="store"
-        width="100%"
-        height="100%"
-        style={{ objectFit: "cover" }}
-      />
-      <Stack className="center">
+    <div>
+      <Stack
+        className="center"
+        sx={{
+          position: "absolute",
+          top: 0,
+          width: "100%",
+          height: { xs: "35vh", xl: "50vh" },
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          background: "url(/images/backgrounds/contacts/st.jpg)",
+        }}
+      >
         <PageNavigation page="Contact Us" />
-        <Grid container sx={{ px: { xl: 12 } }}>
-          <Grid item>
+      </Stack>
+      <Stack
+        sx={{
+          position: "relative",
+          pt: { xs: "32vh", xl: "50vh" },
+          px: { xs: 3, sm: 4, lg: 8, xl: 12 },
+          pb: { xs: 5, md: 10 },
+        }}
+      >
+        <Grid container className="center">
+          <Grid item xs={12} md={6} lg={6} xl={6}>
             <ContactsInfo />
           </Grid>
-          <Grid item>
+          <Grid item xs={12} md={6} lg={6} xl={6}>
             <OurLocation />
           </Grid>
         </Grid>
       </Stack>
-    </Box>
+    </div>
   );
 }
