@@ -67,7 +67,7 @@ function DrawerMenu({ openDrawer, closeDrawer }: Props) {
             <MenuTypography title="About Us" />
           </Link>
           <Link href={"/contacts"} onClick={closeDrawer}>
-            <MenuTypography title="Contacts" />
+            <MenuTypography title="Contact Us" />
           </Link>
         </Stack>
       </Stack>

@@ -1,7 +1,7 @@
 import React from "react";
-import { Stack, Typography, Grid, Box } from "@mui/material";
-import { soacialIcons } from "source/social-icons";
+import { Stack, Typography, Box } from "@mui/material";
 import Link from "next/link";
+import SocialIcons from "components/common/social-icons";
 
 export default function LogoPart() {
   return (
@@ -32,29 +32,7 @@ export default function LogoPart() {
       <Typography className="mouse" sx={{ textAlign: "center" }}>
         We always create new and unique collections
       </Typography>
-      <Grid
-        container
-        sx={{
-          gap: 2,
-        }}
-        className="center"
-      >
-        {soacialIcons.map(({ id, path, Component }) => (
-          <Link href={path} key={id}>
-            <Grid
-              item
-              sx={{
-                borderRadius: "50%",
-                color: "#fff",
-                border: "1px solid #c2a502",
-                p: "5px",
-              }}
-            >
-              <Component />
-            </Grid>
-          </Link>
-        ))}
-      </Grid>
+      <SocialIcons />
     </Stack>
   );
 }

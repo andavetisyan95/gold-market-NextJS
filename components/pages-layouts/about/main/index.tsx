@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Stack, Typography, Grid } from "@mui/material";
 import Link from "next/link";
+import PageNavigation from "components/common/page-navigation";
 
 export default function AboutMain() {
   return (
@@ -29,22 +30,7 @@ export default function AboutMain() {
         >
           Our story is all about your style.
         </Typography>
-        <Stack flexDirection="row" sx={{ gap: 1.5 }}>
-          <Link href={"/"}>
-            <Typography
-              sx={{ fontSize: { xs: 14, sm: 16 } }}
-              className="drawer_text_hover"
-            >
-              Home{" "}
-            </Typography>
-          </Link>
-          <Typography sx={{ fontSize: { xs: 14, sm: 16 } }}> {">"} </Typography>
-          <Typography
-            sx={{ ml: 1, fontWeight: 700, fontSize: { xs: 14, sm: 16 } }}
-          >
-            About
-          </Typography>
-        </Stack>
+        <PageNavigation page="About" />
       </Stack>
     </Box>
   );
