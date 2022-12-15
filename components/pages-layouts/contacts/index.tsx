@@ -9,7 +9,7 @@ type Props = {};
 
 export default function ContactsPage({}: Props) {
   return (
-    <div>
+    <>
       <Stack
         className="center"
         sx={{
@@ -33,7 +33,7 @@ export default function ContactsPage({}: Props) {
           pb: { xs: 5, md: 10 },
         }}
       >
-        <Grid container className="center">
+        <Grid container>
           <Grid item xs={12} md={6} lg={6} xl={6}>
             <ContactsInfo />
           </Grid>
@@ -42,6 +42,6 @@ export default function ContactsPage({}: Props) {
           </Grid>
         </Grid>
       </Stack>
-    </div>
+    </>
   );
 }

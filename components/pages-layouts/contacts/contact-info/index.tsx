@@ -2,7 +2,11 @@ import React from "react";
 import Link from "next/link";
 import { Stack, Typography, Box, Grid } from "@mui/material";
 import { soacialIcons } from "source/social-icons";
-import { COMPANY_EMAIL, COMPANY_LOCATION } from "constants/contacts";
+import {
+  COMPANY_EMAIL,
+  COMPANY_LOCATION,
+  COMPANY_PHONE_NUMBER,
+} from "constants/contacts";
 
 export default function ContactsInfo() {
   return (
@@ -36,6 +40,11 @@ export default function ContactsInfo() {
               <Typography sx={{ color: "#939599" }} className="mouse">
                 {COMPANY_LOCATION}
               </Typography>
+              <Link href={`tel:${COMPANY_PHONE_NUMBER}`}>
+                <Typography sx={{ color: "#939599" }}>
+                  {COMPANY_PHONE_NUMBER}
+                </Typography>
+              </Link>
             </Stack>
           </Stack>
           <Box>
