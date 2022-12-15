@@ -16,6 +16,7 @@ export default function ContactsPage({}: Props) {
           position: "absolute",
           top: 0,
           width: "100%",
+          padding: "30px",
           height: { xs: "35vh", xl: "50vh" },
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

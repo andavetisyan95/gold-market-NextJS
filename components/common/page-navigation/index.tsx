@@ -8,7 +8,7 @@ type Props = {
 
 export default function PageNavigation({ page }: Props) {
   return (
-    <Stack flexDirection="row" sx={{ gap: 1.5 }}>
+    <Stack flexDirection="row" sx={{ gap: 1.5, zIndex: 1 }}>
       <Link href={"/"}>
         <Typography
           sx={{ fontSize: { xs: 14, sm: 16 } }}
