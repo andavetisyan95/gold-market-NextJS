@@ -1,13 +1,10 @@
 import React from "react";
-import { Box, Grid, Stack } from "@mui/material";
-import WithBackground from "components/common/layout-with-background";
+import { Grid, Stack } from "@mui/material";
 import PageNavigation from "components/common/page-navigation";
 import ContactsInfo from "./contact-info";
 import OurLocation from "./map";
 
-type Props = {};
-
-export default function ContactsPage({}: Props) {
+export default function ContactsPage() {
   return (
     <>
       <Stack

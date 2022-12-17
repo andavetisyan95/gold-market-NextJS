@@ -3,9 +3,7 @@ import { Stack } from "@mui/material";
 import OurServices from "./our-services";
 import AboutUsPreview from "./about-us";
 
-https: type Props = {};
-
-export default function OurMission({}: Props) {
+export default function OurMission() {
   return (
     <Stack
       sx={{

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import LogoPart from "./logo-part";
 import ContactsPart from "./contacts-part";
 

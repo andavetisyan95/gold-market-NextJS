@@ -1,5 +1,6 @@
 import React from "react";
-import { Stack, Grid, Typography, Box } from "@mui/material";
+import Link from "next/link";
+import { Stack, Grid, Box } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailIcon from "@mui/icons-material/Mail";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -11,9 +12,7 @@ import {
   COMPANY_LOCATION,
 } from "constants/contacts";
 
-type Props = {};
-
-export default function ContactsPart({}: Props) {
+export default function ContactsPart() {
   return (
     <Stack spacing={5}>
       <Box>
@@ -27,7 +26,9 @@ export default function ContactsPart({}: Props) {
             />
           </Grid>
           <Grid item>
-            <FooterTypography title={COMPANY_PHONE_NUMBER} />
+            <Link href={`tel://${COMPANY_PHONE_NUMBER}`}>
+              <FooterTypography title={COMPANY_PHONE_NUMBER} />
+            </Link>
           </Grid>
         </Grid>
       </Box>
@@ -42,7 +43,9 @@ export default function ContactsPart({}: Props) {
             />
           </Grid>
           <Grid item>
-            <FooterTypography title={COMPANY_EMAIL} />
+            <Link href={`mailto:${COMPANY_EMAIL}`}>
+              <FooterTypography title={COMPANY_EMAIL} />
+            </Link>
           </Grid>
         </Grid>
       </Box>

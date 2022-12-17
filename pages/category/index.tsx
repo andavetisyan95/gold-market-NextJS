@@ -1,7 +1,5 @@
 import React from "react";
 
-type Props = {};
-
-export default function AllCategories({}: Props) {
+export default function AllCategories() {
   return <div>All Categories</div>;
 }

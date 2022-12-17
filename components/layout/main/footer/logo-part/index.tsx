@@ -29,7 +29,10 @@ export default function LogoPart() {
           </Typography>
         </Box>
       </Link>
-      <Typography className="mouse" sx={{ textAlign: "center" }}>
+      <Typography
+        className="mouse"
+        sx={{ textAlign: "center", lineHeight: "28px" }}
+      >
         We always create new and unique collections
       </Typography>
       <SocialIcons />

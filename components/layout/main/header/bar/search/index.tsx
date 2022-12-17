@@ -1,6 +1,6 @@
 import React, { useState, memo } from "react";
 import { useRouter } from "next/router";
-import { Box, Collapse, InputBase, Typography, Stack } from "@mui/material";
+import { Box, InputBase, Typography, Stack, Grow } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 type Props = {};
@@ -10,12 +10,6 @@ function Search({}: Props) {
 
   const [title, setTitle] = useState("");
 
-  const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value !== "") {
-      setTitle(e.target.value);
-      router.query.result = title;
-    }
-  };
   const handleSearchResult = () => {
     if (title !== "") {
       router.push(`/search_result/${title}`);
@@ -24,25 +18,27 @@ function Search({}: Props) {
   };
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && title !== "") {
       router.push(`/search_result/${title}`);
       setTitle("");
     }
   };
   return (
-    <Box>
+    <Box sx={{ position: "relative" }}>
       <InputBase
         autoComplete="false"
         placeholder="Search"
-        onChange={handleChangeInput}
+        onChange={e => setTitle(e.target.value)}
         onKeyPress={handleSearch}
         value={title}
         sx={{
           width: "220px",
           height: { xs: 35, sm: 40 },
           border: "2px solid #baab36",
+          borderBottom: title ? "none" : "2px solid #baab36",
           padding: "10px",
-          borderRadius: "10px",
+          borderRadius: title ? "10px 10px 0 0" : "10px",
+          bgcolor: title.length >= 1 ? "rgba(18, 29, 35,0.7)" : "transparent",
         }}
         inputProps={{
           sx: {
@@ -60,6 +56,28 @@ function Search({}: Props) {
           />
         }
       />
+      <Grow
+        style={{
+          width: "100%",
+          position: "absolute",
+          border: "2px  solid #baab36",
+          borderTop: "unset",
+          borderRadius: "0 0 10px 10px",
+          maxHeight: "200px",
+          wordBreak: "break-all",
+
+          overflow: "auto",
+          backgroundColor: "rgba(18, 29, 35,0.7)",
+        }}
+        in={Boolean(title)}
+        timeout={350}
+      >
+        <Box
+          sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 2 }}
+        >
+          No result found
+        </Box>
+      </Grow>
     </Box>
   );
 }

@@ -1,10 +1,8 @@
 import React from "react";
-import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 import Link from "next/link";
+import { Box, Button, Stack, Typography } from "@mui/material";
 
-type Props = {};
-
-export default function HomeMain({}: Props) {
+export default function HomeMain() {
   return (
     <Box sx={{ px: { xs: 3, md: 6, lg: 8, xl: 20 }, pb: 5 }}>
       <Stack

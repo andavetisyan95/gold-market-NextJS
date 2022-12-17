@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
+import axios from "axios";
 import { Stack, Grid, Box, Typography } from "@mui/material";
 import { ProductProps } from "types/home-page-common";
-import axios from "axios";
 import ProductCard from "components/common/product-card";
 
 export default function OurProducts() {
