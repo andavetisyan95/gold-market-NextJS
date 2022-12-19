@@ -5,9 +5,11 @@ export type CommonProps = {
 };
 
 export type ProductProps = {
-  id: string;
+  id: number;
   title: string | "No title";
   subtitle: string | "No subtitle";
   price: number | "$";
   image: string | "fallback";
+  category: string;
+  description: string;
 };

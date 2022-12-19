@@ -3,9 +3,7 @@ import { useRouter } from "next/router";
 import { Box, InputBase, Typography, Stack, Grow } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-type Props = {};
-
-function Search({}: Props) {
+function Search() {
   const router = useRouter();
 
   const [title, setTitle] = useState("");
@@ -37,7 +35,7 @@ function Search({}: Props) {
           border: "2px solid #baab36",
           borderBottom: title ? "none" : "2px solid #baab36",
           padding: "10px",
-          borderRadius: title ? "10px 10px 0 0" : "10px",
+          borderRadius: title ? "5px 5px 0 0" : "5px",
           bgcolor: title.length >= 1 ? "rgba(18, 29, 35,0.7)" : "transparent",
         }}
         inputProps={{
@@ -62,10 +60,9 @@ function Search({}: Props) {
           position: "absolute",
           border: "2px  solid #baab36",
           borderTop: "unset",
-          borderRadius: "0 0 10px 10px",
+          borderRadius: "0 0 5px 5px",
           maxHeight: "200px",
           wordBreak: "break-all",
-
           overflow: "auto",
           backgroundColor: "rgba(18, 29, 35,0.7)",
         }}

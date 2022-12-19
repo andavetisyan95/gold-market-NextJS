@@ -1,5 +1,12 @@
 import React from "react";
-import { Stack, Box, Typography } from "@mui/material";
+import {
+  Stack,
+  Typography,
+  Card,
+  CardActionArea,
+  CardMedia,
+  CardContent,
+} from "@mui/material";
 import { ProductProps } from "types/home-page-common";
 
 export default function ProductCard({
@@ -8,52 +15,48 @@ export default function ProductCard({
   image,
   price,
   id,
+  category,
 }: ProductProps) {
   return (
-    <Stack spacing={2} className="center">
-      <Box
-        sx={{
-          position: "relative",
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          width: "100%",
-        }}
-      >
-        <img
-          src={image || "/images/fallback/placeholder.jpg"}
-          alt={title}
-          width="100%"
-          height="349px"
-          style={{ objectFit: "cover" }}
-          loading="lazy"
-        />
-      </Box>
-      <Stack className="center" spacing={1}>
-        <Typography
+    <Card
+      sx={{
+        background: "rgb(18, 29, 35)",
+        boxShadow: 0,
+      }}
+    >
+      <CardActionArea disableRipple href={`/category/${category}/${id}`}>
+        <CardMedia
           sx={{
-            fontSize: { xs: 18, sm: 16, md: 18 },
-            color: "primary.main",
-            fontWeight: "bold",
+            width: "100%",
+            height: { xs: "250px", md: "300px" },
+            objectFit: "cover",
           }}
-          className="mouse"
-        >
-          {title}
-        </Typography>
-        <Typography
-          className="mouse"
-          sx={{ fontSize: { xs: 14, sm: 12, md: 14 } }}
-        >
-          {subtitle}
-        </Typography>
-        <Typography
-          className="mouse"
-          sx={{ fontWeight: "bold", fontSize: { sm: 14, md: 16 } }}
-        >
-          ${price}
-        </Typography>
-      </Stack>
-    </Stack>
+          component="img"
+          image={image}
+          title={title}
+        ></CardMedia>
+        <CardContent>
+          <Typography
+            sx={{
+              fontSize: { xs: 18, sm: 16, md: 18 },
+              color: "primary.main",
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
+            {title}
+          </Typography>
+        </CardContent>
+
+        <Stack className="center" spacing={1}>
+          <Typography sx={{ fontSize: { xs: 14, sm: 12, md: 14 } }}>
+            {subtitle}
+          </Typography>
+          <Typography sx={{ fontWeight: "bold", fontSize: { sm: 14, md: 16 } }}>
+            ${price}
+          </Typography>
+        </Stack>
+      </CardActionArea>
+    </Card>
   );
 }
-
-// you have to go to the square and before you reach it you will see a street going down on your left

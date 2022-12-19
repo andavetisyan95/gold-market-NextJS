@@ -8,7 +8,7 @@ export default function OurProducts() {
   const [allProducts, setAllProducts] = useState<ProductProps[]>([]);
   const getAllProducts = useCallback(async () => {
     await axios
-      .get("http://localhost:8000/products?_limit=4")
+      .get("http://localhost:8000/products?_sort=price&_limit=4")
       .then(response => setAllProducts(response.data))
       .catch(error => {
         console.log(error);
@@ -24,6 +24,7 @@ export default function OurProducts() {
       className="center"
       sx={{
         pt: { xs: 10, md: 12 },
+        pb: 5,
         px: { xs: 5, sm: 10, md: 8, xl: 10 },
       }}
       spacing={5}
@@ -35,17 +36,20 @@ export default function OurProducts() {
       </Box>
       <Box>
         <Grid container spacing={5}>
-          {allProducts.map(({ id, title, subtitle, image, price }) => (
-            <Grid item xs={12} sm={6} md={3} key={`${title}_{id}`}>
-              <ProductCard
-                title={title}
-                subtitle={subtitle}
-                image={image}
-                price={price}
-                id={id}
-              />
-            </Grid>
-          ))}
+          {allProducts.map(
+            ({ id, title, subtitle, image, price, category }) => (
+              <Grid item xs={12} sm={6} md={3} key={`${title}_{id}`}>
+                <ProductCard
+                  title={title}
+                  subtitle={subtitle}
+                  image={image}
+                  price={price}
+                  id={id}
+                  category={category}
+                />
+              </Grid>
+            )
+          )}
         </Grid>
       </Box>
     </Stack>

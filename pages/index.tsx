@@ -1,4 +1,5 @@
-import React from "react";
+import React, { memo } from "react";
+
 import { Stack } from "@mui/material";
 
 import HomeMain from "components/pages-layouts/home/main";
@@ -7,9 +8,7 @@ import CategoriesGrid from "components/pages-layouts/home/categories";
 import OurMission from "components/pages-layouts/home/our-mission";
 import OurProducts from "components/pages-layouts/home/our-products";
 
-type Props = {};
-
-export default function Home({}: Props) {
+function Home() {
   return (
     <>
       <WithBackground coverImg="/images/backgrounds/home/mainPage.jpg" />
@@ -22,3 +21,5 @@ export default function Home({}: Props) {
     </>
   );
 }
+
+export default memo(Home);
