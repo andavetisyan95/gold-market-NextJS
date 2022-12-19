@@ -65,18 +65,18 @@ function ProductPage() {
       </Grid>
       <Stack className="center">
         <Grid container columnSpacing={4} rowSpacing={4}>
-          <Grid item xs={12} sm={5}>
+          <Grid item xs={12} sm={6} md={5}>
             <Image
               src={
                 individualProduct.image || "/images/fallback/placeholder.jpg"
               }
               alt={individualProduct.title}
-              width={200}
+              width={500}
               height={500}
               layout="responsive"
             />
           </Grid>
-          <Grid item xs={12} sm={5} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Stack spacing={4} className="center">
               <Stack spacing={2}>
                 <Typography
@@ -84,7 +84,7 @@ function ProductPage() {
                     textTransform: "capitalize",
                     color: "primary.main",
                     fontWeight: 700,
-                    fontSize: { xl: 20 },
+                    fontSize: { xs: 18, lg: 20 },
                     textAlign: "center",
                     letterSpacing: 2,
                   }}
@@ -115,7 +115,9 @@ function ProductPage() {
                     p: 1.5,
                   }}
                 >
-                  <Typography sx={{ lineHeight: "26px" }}>
+                  <Typography
+                    sx={{ lineHeight: "26px", fontSize: { xs: 14, lg: 16 } }}
+                  >
                     {individualProduct.description}
                   </Typography>
                 </Box>

@@ -37,7 +37,7 @@ export default function OurProducts() {
       <Box>
         <Grid container spacing={5}>
           {allProducts.map(
-            ({ id, title, subtitle, image, price, category }) => (
+            ({ id, title, subtitle, image, price, category, description }) => (
               <Grid item xs={12} sm={6} md={3} key={`${title}_{id}`}>
                 <ProductCard
                   title={title}
@@ -46,6 +46,7 @@ export default function OurProducts() {
                   price={price}
                   id={id}
                   category={category}
+                  description={description}
                 />
               </Grid>
             )

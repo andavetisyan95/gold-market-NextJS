@@ -16,6 +16,7 @@ export default function ProductCard({
   price,
   id,
   category,
+  description,
 }: ProductProps) {
   return (
     <Card
