@@ -28,7 +28,7 @@ function AllCategories({ products }: { products: ProductProps[] }) {
       <Stack
         sx={{
           px: { xs: 3, md: 5, lg: 8, xl: 12 },
-          pt: { xs: "32vh", xl: "50vh" },
+          pt: { xs: "50vh" },
           pb: { xs: 5, md: 10 },
         }}
       >
@@ -42,7 +42,7 @@ export async function getServerSideProps() {
   const res = await fetch("http://localhost:8000/products");
   const products: ProductProps[] = await res.json();
 
-  return { props: { products: products } };
+  return { props: { products } };
 }
 
 export default memo(AllCategories);

@@ -8,7 +8,7 @@ export default function OurProducts() {
   const [allProducts, setAllProducts] = useState<ProductProps[]>([]);
   const getAllProducts = useCallback(async () => {
     await axios
-      .get("http://localhost:8000/products?_sort=price&_limit=4")
+      .get("http://localhost:8000/products?_limit=4")
       .then(response => setAllProducts(response.data ?? []))
       .catch(error => {
         console.log(error);
@@ -18,6 +18,18 @@ export default function OurProducts() {
   useEffect(() => {
     getAllProducts();
   }, [getAllProducts]);
+
+  const array: ProductProps[] = [];
+
+  // function getRandomProducts() {
+  //   let a = [];
+  //   for (let i = 0; i < 4; i++) {
+  //     a.push(Math.floor(Math.random() * allProducts?.length));
+  //   }
+
+  //   return a;
+  // }
+  // console.log(getRandomProducts());
 
   return (
     <Stack

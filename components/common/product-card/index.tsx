@@ -8,6 +8,7 @@ import {
   CardContent,
 } from "@mui/material";
 import { ProductProps } from "types/home-page-common";
+import Link from "next/link";
 
 export default function ProductCard({
   title,
@@ -19,13 +20,13 @@ export default function ProductCard({
   description,
 }: ProductProps) {
   return (
-    <Card
-      sx={{
-        background: "rgb(18, 29, 35)",
-        boxShadow: 0,
-      }}
-    >
-      <CardActionArea disableRipple href={`/category/${category}/${id}`}>
+    <Link href={`/category/${category}/${id}`}>
+      <Card
+        sx={{
+          background: "rgb(18, 29, 35)",
+          boxShadow: 0,
+        }}
+      >
         <CardMedia
           sx={{
             width: "100%",
@@ -57,7 +58,7 @@ export default function ProductCard({
             ${price}
           </Typography>
         </Stack>
-      </CardActionArea>
-    </Card>
+      </Card>
+    </Link>
   );
 }

@@ -1,7 +1,5 @@
-import React, { useCallback, useEffect, useState, memo } from "react";
-import axios from "axios";
+import React, { memo } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import Image from "next/image";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { ProductProps } from "types/home-page-common";
@@ -9,26 +7,11 @@ import SuggestProducts from "components/pages-layouts/category/product-page";
 import DiamondDecor from "components/pages-layouts/category/product-page/decoration";
 import ProductNotFound from "components/pages-layouts/category/product-page/not-found";
 import ProductNavigation from "components/pages-layouts/category/product-page/product-navigation";
+import { NextPageContext } from "next";
 
-function ProductPage() {
-  const [products, setProducts] = useState<ProductProps[]>([]);
-
+function ProductPage({ products }: { products: ProductProps[] }) {
   const router = useRouter();
   const id = router.query.id ? +router.query.id : undefined;
-
-  const getProduct = useCallback(async () => {
-    await axios
-      .get(`http://localhost:8000/products?category=${router.query.sub}`)
-      .then(response => {
-        setProducts(response.data ?? []);
-      })
-      .catch(error => console.log(error));
-  }, [router.query.sub]);
-
-  useEffect(() => {
-    getProduct();
-  }, [getProduct]);
-  console.log(products);
 
   const individualProduct = products.find(product => product.id === id);
   if (!individualProduct) {
@@ -159,36 +142,22 @@ function ProductPage() {
   );
 }
 
-// export async function getStaticProps() {
-//   const products: ProductProps[] = await (
-//     await axios.get("http://localhost:8000/products")
-//   ).data;
+interface PostNextPageContext extends NextPageContext {
+  query: {
+    sub: string;
+  };
+}
 
-//   return {
-//     props: { products },
-//   };
-// }
-
-// export async function getStaticPaths() {
-//   const products: ProductProps[] = (
-//     await axios.get("http://localhost:8000/products")
-//   ).data;
-//   // const response = await fetch("http://localhost:8000/products");
-//   // const products: ProductProps[] = await response.json();
-
-//   const paths = products.map(product => {
-//     return {
-//       params: {
-//         id: `${product.id}`,
-//         sub: `${product.category}`,
-//       },
-//     };
-//   });
-
-//   return {
-//     paths: paths,
-//     fallback: false,
-//   };
-// }
+export async function getServerSideProps(ctx: PostNextPageContext) {
+  const response = await fetch(
+    `http://localhost:8000/products?category=${ctx.query.sub}`
+  );
+  const products: ProductProps[] = await response.json();
+  return {
+    props: {
+      products,
+    },
+  };
+}
 
 export default memo(ProductPage);
