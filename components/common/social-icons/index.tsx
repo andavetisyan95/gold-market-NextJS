@@ -17,10 +17,14 @@ export default function SocialIcons() {
           <Grid
             item
             sx={{
-              borderRadius: "50%",
+              borderRadius: "100%",
               color: "#fff",
               border: "1px solid #c2a502",
-              p: "5px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: 40,
+              height: 40,
             }}
           >
             <Component />

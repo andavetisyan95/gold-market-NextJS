@@ -77,7 +77,7 @@ export default function NavMenu() {
                   letterSpacing: "2px",
                 }}
                 color="primary.main"
-                className="text_sparkle"
+                // className="text_sparkle"
               >
                 The Carats
               </Typography>

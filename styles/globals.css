@@ -55,9 +55,9 @@ a {
   transition: 0.5s;
 }
 
-.text_sparkle:hover {
+/* .text_sparkle:hover {
   text-shadow: 0 0 10px #baab36, 0 0 20px #baab36, 0 0 40px #baab36;
-}
+} */
 
 .flex_center {
   display: flex;
@@ -144,4 +144,15 @@ a {
 
 .mouse {
   cursor: default;
+}
+
+.description::before {
+  content: "";
+  height: 46px;
+  width: 1px;
+  background: white;
+  position: absolute;
+  margin-top: 40px;
+  left: 50%;
+  transform: translate(-50%);
 }

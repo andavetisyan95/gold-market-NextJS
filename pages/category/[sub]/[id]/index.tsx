@@ -5,6 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { ProductProps } from "types/home-page-common";
+import SuggestProducts from "components/pages-layouts/category/product-page";
+import DiamondDecor from "components/pages-layouts/category/product-page/decoration";
+import ProductNotFound from "components/pages-layouts/category/product-page/not-found";
 
 function ProductPage() {
   const [products, setProducts] = useState<ProductProps[]>([]);
@@ -14,20 +17,21 @@ function ProductPage() {
 
   const getProduct = useCallback(async () => {
     await axios
-      .get("http://localhost:8000/products")
+      .get(`http://localhost:8000/products?category=${router.query.sub}`)
       .then(response => {
-        setProducts(response.data);
+        setProducts(response.data ?? []);
       })
       .catch(error => console.log(error));
-  }, []);
+  }, [router.query.sub]);
 
   useEffect(() => {
     getProduct();
   }, [getProduct]);
+  console.log(products);
 
   const individualProduct = products.find(product => product.id === id);
   if (!individualProduct) {
-    return <div>Product not found</div>;
+    return <ProductNotFound />;
   }
 
   return (
@@ -36,7 +40,7 @@ function ProductPage() {
         px: { xs: 3, md: 5, lg: 8, xl: 12 },
         py: { xs: 7, lg: 10 },
       }}
-      spacing={{ xs: 10 }}
+      spacing={{ xs: 12 }}
     >
       <Grid container spacing={1}>
         <Grid item>
@@ -63,7 +67,7 @@ function ProductPage() {
           </Typography>
         </Grid>
       </Grid>
-      <Stack className="center">
+      <Stack>
         <Grid container columnSpacing={4} rowSpacing={4}>
           <Grid item xs={12} sm={6} md={5}>
             <Image
@@ -88,6 +92,7 @@ function ProductPage() {
                     textAlign: "center",
                     letterSpacing: 2,
                   }}
+                  className="mouse"
                 >
                   {individualProduct.category}
                 </Typography>
@@ -99,13 +104,22 @@ function ProductPage() {
                 ></Box>
               </Stack>
               <Stack spacing={3}>
-                <Typography>{individualProduct.title}</Typography>
+                <Typography className="mouse">
+                  {individualProduct.title}
+                </Typography>
                 <Grid container gap={1}>
                   <Grid item>
-                    <Typography sx={{ color: "primary.dark" }}>$</Typography>
+                    <Typography
+                      className="mouse"
+                      sx={{ color: "primary.dark" }}
+                    >
+                      $
+                    </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography>{individualProduct.price}</Typography>
+                    <Typography className="mouse">
+                      {individualProduct.price}
+                    </Typography>
                   </Grid>
                 </Grid>
                 <Box
@@ -116,6 +130,7 @@ function ProductPage() {
                   }}
                 >
                   <Typography
+                    className="mouse"
                     sx={{ lineHeight: "26px", fontSize: { xs: 14, lg: 16 } }}
                   >
                     {individualProduct.description}
@@ -125,6 +140,39 @@ function ProductPage() {
             </Stack>
           </Grid>
         </Grid>
+      </Stack>
+      <Stack className="center" spacing={10} sx={{ pt: { xs: 7, lg: 10 } }}>
+        <Typography
+          sx={{
+            fontSize: { xs: 18, lg: 24 },
+            color: "primary.main",
+            position: "relative",
+          }}
+          className="description mouse"
+        >
+          Product Description
+        </Typography>
+        <Typography sx={{ textAlign: "center" }} className="mouse">
+          {individualProduct.description}
+        </Typography>
+      </Stack>
+      <Stack className="center" sx={{ pt: { xs: 5, lg: 10 } }} spacing={10}>
+        <Stack className="center" spacing={2}>
+          <Typography
+            sx={{
+              fontSize: { xs: 18, lg: 24 },
+              color: "primary.main",
+              position: "relative",
+            }}
+            className="mouse"
+          >
+            You might also like
+          </Typography>
+          <DiamondDecor />
+        </Stack>
+        <Box>
+          <SuggestProducts category={individualProduct.category} />
+        </Box>
       </Stack>
     </Stack>
   );

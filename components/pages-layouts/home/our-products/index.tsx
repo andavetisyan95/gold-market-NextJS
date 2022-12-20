@@ -9,7 +9,7 @@ export default function OurProducts() {
   const getAllProducts = useCallback(async () => {
     await axios
       .get("http://localhost:8000/products?_sort=price&_limit=4")
-      .then(response => setAllProducts(response.data))
+      .then(response => setAllProducts(response.data ?? []))
       .catch(error => {
         console.log(error);
       });

@@ -9,11 +9,10 @@ export default function HomeMain() {
         spacing={8}
         sx={{
           background: "rgba(0,0,0,0.7)",
-          justifyContent: "center",
-          alignItems: "center",
           px: { xs: 3, md: 4 },
           py: { xs: 5, lg: 7 },
         }}
+        className="center"
       >
         <Typography
           sx={{
