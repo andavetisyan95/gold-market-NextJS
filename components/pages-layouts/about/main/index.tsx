@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Stack, Typography, Grid } from "@mui/material";
-import Link from "next/link";
 import PageNavigation from "components/common/page-navigation";
 
 export default function AboutMain() {

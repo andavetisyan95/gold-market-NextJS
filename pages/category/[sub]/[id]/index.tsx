@@ -8,6 +8,7 @@ import { ProductProps } from "types/home-page-common";
 import SuggestProducts from "components/pages-layouts/category/product-page";
 import DiamondDecor from "components/pages-layouts/category/product-page/decoration";
 import ProductNotFound from "components/pages-layouts/category/product-page/not-found";
+import ProductNavigation from "components/pages-layouts/category/product-page/product-navigation";
 
 function ProductPage() {
   const [products, setProducts] = useState<ProductProps[]>([]);
@@ -42,31 +43,10 @@ function ProductPage() {
       }}
       spacing={{ xs: 12 }}
     >
-      <Grid container spacing={1}>
-        <Grid item>
-          <Link href="/category">
-            <Typography>Back to products</Typography>
-          </Link>
-        </Grid>
-        <Grid item>
-          <Typography>/</Typography>
-        </Grid>
-        <Grid item>
-          <Link href={`/category/${individualProduct.category}`}>
-            <Typography sx={{ textTransform: "capitalize" }}>
-              {individualProduct.category}
-            </Typography>
-          </Link>
-        </Grid>
-        <Grid item>
-          <Typography>/</Typography>
-        </Grid>
-        <Grid item>
-          <Typography sx={{ color: "primary.main" }}>
-            {individualProduct.title}
-          </Typography>
-        </Grid>
-      </Grid>
+      <ProductNavigation
+        category={individualProduct.category}
+        title={individualProduct.title}
+      />
       <Stack>
         <Grid container columnSpacing={4} rowSpacing={4}>
           <Grid item xs={12} sm={6} md={5}>
@@ -93,6 +73,7 @@ function ProductPage() {
                     letterSpacing: 2,
                   }}
                   className="mouse"
+                  component="h1"
                 >
                   {individualProduct.category}
                 </Typography>
@@ -104,7 +85,7 @@ function ProductPage() {
                 ></Box>
               </Stack>
               <Stack spacing={3}>
-                <Typography className="mouse">
+                <Typography className="mouse" component="h1">
                   {individualProduct.title}
                 </Typography>
                 <Grid container gap={1}>
